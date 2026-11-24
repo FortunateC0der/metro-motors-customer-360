@@ -1,0 +1,202 @@
+[
+  {
+    "event_id": "MM-TLM-1795512886475-001",
+    "vin": "MMTEST00000000001",
+    "timestamp": "2026-11-24T09:34:27.475Z",
+    "mileage_km": 45250,
+    "energy_type": "battery",
+    "energy_level_pct": 78,
+    "warning_code": null,
+    "severity": "none"
+  },
+  {
+    "event_id": "MM-TLM-1795512886475-002",
+    "vin": "MMTEST00000000002",
+    "timestamp": "2026-11-24T09:34:28.475Z",
+    "mileage_km": 68500,
+    "energy_type": "fuel",
+    "energy_level_pct": 65,
+    "warning_code": null,
+    "severity": "none"
+  },
+  {
+    "event_id": "MM-TLM-1795512886475-003",
+    "vin": "MMTEST00000000003",
+    "timestamp": "2026-11-24T09:34:29.475Z",
+    "mileage_km": 32100,
+    "energy_type": "battery",
+    "energy_level_pct": 92,
+    "warning_code": null,
+    "severity": "none"
+  },
+  {
+    "event_id": "MM-TLM-1795512886475-004",
+    "vin": "MMTEST00000000001",
+    "timestamp": "2026-11-24T09:34:30.475Z",
+    "mileage_km": 45255,
+    "energy_type": "battery",
+    "energy_level_pct": 77,
+    "warning_code": null,
+    "severity": "none"
+  },
+  {
+    "event_id": "MM-TLM-1795512886475-005",
+    "vin": "MMTEST00000000002",
+    "timestamp": "2026-11-24T09:34:31.475Z",
+    "mileage_km": 68505,
+    "energy_type": "fuel",
+    "energy_level_pct": 64,
+    "warning_code": null,
+    "severity": "none"
+  },
+  {
+    "event_id": "MM-TLM-1795512886475-006",
+    "vin": "MMTEST00000000003",
+    "timestamp": "2026-11-24T09:34:32.475Z",
+    "mileage_km": 32105,
+    "energy_type": "battery",
+    "energy_level_pct": 91,
+    "warning_code": null,
+    "severity": "none"
+  },
+  {
+    "event_id": "MM-TLM-1795512886475-007",
+    "vin": "MMTEST00000000001",
+    "timestamp": "2026-11-24T09:34:33.475Z",
+    "mileage_km": 45260,
+    "energy_type": "battery",
+    "energy_level_pct": 76,
+    "warning_code": null,
+    "severity": "none"
+  },
+  {
+    "event_id": "MM-TLM-1795512886475-008",
+    "vin": "MMTEST00000000002",
+    "timestamp": "2026-11-24T09:34:34.475Z",
+    "mileage_km": 68510,
+    "energy_type": "fuel",
+    "energy_level_pct": 63,
+    "warning_code": null,
+    "severity": "none"
+  },
+  {
+    "event_id": "MM-TLM-1795512886475-009",
+    "vin": "MMTEST00000000003",
+    "timestamp": "2026-11-24T09:34:35.475Z",
+    "mileage_km": 32110,
+    "energy_type": "battery",
+    "energy_level_pct": 90,
+    "warning_code": null,
+    "severity": "none"
+  },
+  {
+    "event_id": "MM-TLM-1795512886475-010",
+    "vin": "MMTEST00000000001",
+    "timestamp": "2026-11-24T09:34:36.475Z",
+    "mileage_km": 45265,
+    "energy_type": "battery",
+    "energy_level_pct": 75,
+    "warning_code": null,
+    "severity": "none"
+  },
+  {
+    "event_id": "MM-TLM-1795512886475-011",
+    "vin": "MMTEST00000000002",
+    "timestamp": "2026-11-24T09:34:37.475Z",
+    "mileage_km": 68515,
+    "energy_type": "fuel",
+    "energy_level_pct": 62,
+    "warning_code": null,
+    "severity": "none"
+  },
+  {
+    "event_id": "MM-TLM-1795512886475-012",
+    "vin": "MMTEST00000000003",
+    "timestamp": "2026-11-24T09:34:38.475Z",
+    "mileage_km": 32115,
+    "energy_type": "battery",
+    "energy_level_pct": 89,
+    "warning_code": null,
+    "severity": "none"
+  },
+  {
+    "event_id": "MM-TLM-1795512886475-013",
+    "vin": "MMTEST00000000001",
+    "timestamp": "2026-11-24T09:34:39.475Z",
+    "mileage_km": 45270,
+    "energy_type": "battery",
+    "energy_level_pct": 74,
+    "warning_code": null,
+    "severity": "none"
+  },
+  {
+    "event_id": "MM-TLM-1795512886475-014",
+    "vin": "MMTEST00000000002",
+    "timestamp": "2026-11-24T09:34:40.475Z",
+    "mileage_km": 68520,
+    "energy_type": "fuel",
+    "energy_level_pct": 61,
+    "warning_code": null,
+    "severity": "none"
+  },
+  {
+    "event_id": "MM-TLM-1795512886475-015",
+    "vin": "MMTEST00000000003",
+    "timestamp": "2026-11-24T09:34:41.475Z",
+    "mileage_km": 32120,
+    "energy_type": "battery",
+    "energy_level_pct": 88,
+    "warning_code": null,
+    "severity": "none"
+  },
+  {
+    "event_id": "MM-TLM-1795512886475-016",
+    "vin": "MMTEST00000000001",
+    "timestamp": "2026-11-24T09:34:42.475Z",
+    "mileage_km": 45275,
+    "energy_type": "battery",
+    "energy_level_pct": 73,
+    "warning_code": null,
+    "severity": "none"
+  },
+  {
+    "event_id": "MM-TLM-1795512886475-017",
+    "vin": "MMTEST00000000002",
+    "timestamp": "2026-11-24T09:34:43.475Z",
+    "mileage_km": 68525,
+    "energy_type": "fuel",
+    "energy_level_pct": 60,
+    "warning_code": null,
+    "severity": "none"
+  },
+  {
+    "event_id": "MM-TLM-1795512886475-018",
+    "vin": "MMTEST00000000003",
+    "timestamp": "2026-11-24T09:34:44.475Z",
+    "mileage_km": 32125,
+    "energy_type": "battery",
+    "energy_level_pct": 87,
+    "warning_code": null,
+    "severity": "none"
+  },
+  {
+    "event_id": "MM-TLM-1795512886475-019",
+    "vin": "MMTEST00000000001",
+    "timestamp": "2026-11-24T09:34:45.475Z",
+    "mileage_km": 45280,
+    "energy_type": "battery",
+    "energy_level_pct": 72,
+    "warning_code": null,
+    "severity": "none"
+  },
+  {
+    "event_id": "MM-TLM-1795512886475-020",
+    "vin": "MMTEST00000000002",
+    "timestamp": "2026-11-24T09:34:46.475Z",
+    "mileage_km": 68530,
+    "energy_type": "fuel",
+    "energy_level_pct": 59,
+    "warning_code": null,
+    "severity": "none"
+  }
+]
