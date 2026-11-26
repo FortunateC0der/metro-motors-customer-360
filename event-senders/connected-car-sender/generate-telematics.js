@@ -24,51 +24,65 @@ const vehicles = parse(csv, {
   trim: true
 });
 
-// Only select connected vehicles
-const connectedVehicles = vehicles.filter(
-  vehicle => vehicle.connected_car.toUpperCase() === "Y"
-);
+// Filter for connected vehicles with specific VINs
+    const selectedVins = new Set([
+    "VLTK9Y2TLT5516837",
+    "KSML4FSGJT3822356",
+    "RBK9C4JXTT6555072"
+    ]);
 
-if (connectedVehicles.length === 0) {
-  throw new Error("No connected vehicles found.");
-}
-
-// Generate 4 events per connected vehicle
-const events = [];
-const startTime = Date.now() - 60 * 60 * 1000;
-
-connectedVehicles.forEach((vehicle, vehicleIndex) => {
-  const baseOdometer = 25000 + vehicleIndex * 12000;
-
-  for (let i = 0; i < 4; i++) {
-    const eventTime = new Date(
-      startTime + (vehicleIndex * 4 + i) * 60 * 1000
+    const connectedVehicles = vehicles.filter(
+    vehicle =>
+        vehicle.connected_car.toUpperCase() === "Y" &&
+        selectedVins.has(vehicle.vin)
     );
 
-    // Two repeated high-warning events for testing
-    const warningCode =
-      vehicleIndex === 0 && (i === 2 || i === 3)
-        ? "OIL-PRESS"
-        : null;
+    if (connectedVehicles.length !== 3) {
+    throw new Error(
+        `Expected 3 selected vehicles, found ${connectedVehicles.length}`
+    );
+    }
 
-    const isWarning = warningCode !== null;
 
-    const fuelOrCharge = vehicle.fuel_type === "Electric"
-      ? 70 - (i * 3)
-      : 85 - (i * 2);
+    // Generate exactly 20 events across 3 vehicles
+    const events = [];
+    const eventsPerVehicle = [7, 7, 6];
+    const startTime = Date.now() - 60 * 60 * 1000;
 
-    events.push({
-      event_id: `TM-${vehicle.vin}-${i + 1}`,
-      event_timestamp: eventTime.toISOString(),
-      vin: vehicle.vin,
-      odometer_km: baseOdometer + (i * 25),
-      fuel_or_charge_percent: fuelOrCharge,
-      warning_code: warningCode,
-      latitude: isWarning ? -25.7479 : null,
-      longitude: isWarning ? 28.2293 : null
+    connectedVehicles.forEach((vehicle, vehicleIndex) => {
+    const baseOdometer = 25000 + vehicleIndex * 12000;
+    const eventCount = eventsPerVehicle[vehicleIndex];
+
+    for (let i = 0; i < eventCount; i++) {
+        const eventTime = new Date(
+        startTime + (vehicleIndex * 7 + i) * 60 * 1000
+        );
+
+        // Two repeated high-severity EV warning events
+        const warningCode =
+        vehicleIndex === 0 && (i === 4 || i === 5)
+            ? "HVB-TEMP"
+            : null;
+
+        const isWarning = warningCode !== null;
+
+        const fuelOrCharge = vehicle.fuel_type === "Electric"
+        ? 70 - (i * 3)
+        : 85 - (i * 2);
+
+        events.push({
+        event_id: `TM-${vehicle.vin}-${i + 1}`,
+        event_timestamp: eventTime.toISOString(),
+        vin: vehicle.vin,
+        odometer_km: baseOdometer + (i * 25),
+        fuel_or_charge_percent: fuelOrCharge,
+        warning_code: warningCode,
+        latitude: isWarning ? -25.7479 : null,
+        longitude: isWarning ? 28.2293 : null
+        });
+    }
     });
-  }
-});
+
 
 // Shuffle arrival order to test out-of-order event handling
 for (let i = events.length - 1; i > 0; i--) {

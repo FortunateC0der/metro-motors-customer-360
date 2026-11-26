@@ -1,0 +1,49 @@
+
+openapi: 3.0.3
+info:
+  title: Metro Motors Connected Car Telemetry
+  version: 1.0.0
+  description: Schema for connected vehicle telemetry events.
+
+components:
+  schemas:
+    ConnectedCarTelemetry:
+      type: object
+      properties:
+        event_id:
+          type: string
+          description: Unique identifier made of letters, numbers and dashes
+          example: "TM-RBK9C4JXTT6555072-1"
+        event_timestamp:
+          type: string
+          format: date-time
+          description: ISO 8601 timestamp with time and timezone (2026-11-26T09:22:16.882Z)
+          example: "2026-11-26T09:22:16.882Z"
+        vin:
+          type: string
+          description: Vehicle Identification Number – alphanumeric
+          example: "RBK9C4JXTT6555072"
+        odometer_km:
+          type: integer
+          format: int64
+          description: Whole number representing kilometres
+          example: 37000
+        fuel_or_charge_percent:
+          type: integer
+          description: Whole number percentage of fuel or battery charge (0–100)
+          example: 70
+        warning_code:
+          type: string
+          nullable: true
+          description: Vehicle warning code (null when no warning is present)
+          example: "HVB-TEMP"
+        latitude:
+          type: number
+          format: double
+          nullable: true
+          description: Geographic latitude for warning events (null when not applicable)
+        longitude:
+          type: number
+          format: double
+          nullable: true
+          description: Geographic longitude for warning events (null when not applicable)
