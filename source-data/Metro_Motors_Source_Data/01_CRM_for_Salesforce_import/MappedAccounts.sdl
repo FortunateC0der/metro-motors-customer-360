@@ -1,0 +1,8 @@
+#Mapping values
+#Wed Nov 25 14:18:50 SAST 2026
+BillingCity=BillingCity
+BillingCountry=BillingCountry
+External_ID__c=External_ID__c
+Industry=Industry
+Name=Name
+Type=Type

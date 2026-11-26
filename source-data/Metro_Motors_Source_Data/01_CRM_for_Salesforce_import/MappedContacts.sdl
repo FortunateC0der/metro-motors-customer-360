@@ -1,0 +1,18 @@
+#Mapping values
+#Wed Nov 25 10:34:04 SAST 2026
+Account_External_Id__c=Account\:Account-External_ID__c
+Birthdate=Birthdate
+Contact_Type__c=Contact_Type__c
+Email=Email
+External_ID__c=External_ID__c
+FirstName=FirstName
+LastName=LastName
+MailingCity=MailingCity
+MailingCountry=MailingCountry
+MailingPostalCode=MailingPostalCode
+MailingStreet=MailingStreet
+MobilePhone=MobilePhone
+National_ID__c=National_ID__c
+Original_Created_Date__c=Original_Created_Date__c
+Preferred_Dealership__c=Preferred_Dealership__c
+Salutation=Salutation

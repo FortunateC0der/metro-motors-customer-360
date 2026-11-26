@@ -1,0 +1,16 @@
+dealership_code,dealership_name,city,region,has_ev_charging
+D01,Metro Motors Sandton,Johannesburg,GP,Y
+D02,Metro Motors Midrand,Midrand,GP,Y
+D03,Metro Motors Pretoria East,Pretoria,GP,N
+D04,Metro Motors Centurion,Centurion,GP,N
+D05,Metro Motors Randburg,Johannesburg,GP,N
+D06,Metro Motors Cape Town City,Cape Town,WC,Y
+D07,Metro Motors Bellville,Cape Town,WC,N
+D08,Metro Motors Somerset West,Somerset West,WC,N
+D09,Metro Motors Umhlanga,Durban,KZN,Y
+D10,Metro Motors Pinetown,Durban,KZN,N
+D11,Metro Motors Gqeberha,Gqeberha,EC,N
+D12,Metro Motors Bloemfontein,Bloemfontein,FS,N
+D13,Metro Motors Polokwane,Polokwane,LP,N
+D14,Metro Motors Nelspruit,Mbombela,MP,N
+D15,Metro Motors East London,East London,EC,N

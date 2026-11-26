@@ -1,0 +1,11 @@
+#Mapping values
+#Wed Nov 25 11:42:30 SAST 2026
+Account_External_Id__c=Account\:Account-External_ID__c
+Amount=Amount
+CloseDate=CloseDate
+Contact_External_Id__c=Contact__r\:Contact-External_ID__c
+Dealership__c=Dealership__c
+External_ID__c=External_ID__c
+Name=Name
+Sale_ID__c=Sale_ID__c
+StageName=StageName

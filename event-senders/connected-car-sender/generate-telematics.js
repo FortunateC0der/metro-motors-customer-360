@@ -1,80 +1,94 @@
+// This script generates sample telematics events for connected vehicles from Metro Motors.
 const fs = require("fs");
 const path = require("path");
+const { parse } = require("csv-parse/sync");
 
-// Sample data for connected cars
-const vehicles = [
-    {
-        vin: "MMTEST00000000001",
-        mileage: 45250,
-        energyType: "battery",
-        energyLevel: 78
-    },
-    {
-        vin: "MMTEST00000000002",
-        mileage: 68500,
-        energyType: "fuel",
-        energyLevel: 65
-    },
-    {
-        vin: "MMTEST00000000003",
-        mileage: 32100,
-        energyType: "battery",
-        energyLevel: 92
-    }
-];
+// Paths to the source vehicle data and the output file
+const vehiclesPath = path.resolve(
+  __dirname,
+  "../../source-data/Metro_Motors_Source_Data/02_Dealer_management_system/vehicles.csv"
+);
 
-// Generate sample telematics events for connected cars
-const events = [];
-const eventCount = 20;
-const generationTime = Date.now();
+// Output path for the generated telematics events
+const outputPath = path.resolve(
+  __dirname,
+  "../../generated-data/connected-cars/sample-telematics-events.json"
+);
 
-for (let i = 0; i < eventCount; i++) {
-    const vehicle = vehicles[i % vehicles.length];
+// Read actual vehicle records
+const csv = fs.readFileSync(vehiclesPath, "utf8");
 
-    const vehicleIndex = i % vehicles.length;
-    const readingNumber = Math.floor(i / vehicles.length);
+const vehicles = parse(csv, {
+  columns: true,
+  skip_empty_lines: true,
+  trim: true
+});
 
-    // Create a telematics event for the vehicle
-    const event = {
-        event_id: `MM-TLM-${generationTime}-${String(i + 1).padStart(3, "0")}`,
-        vin: vehicle.vin,
-        timestamp: new Date(
-            generationTime - (eventCount - 1 - i) * 1000
-        ).toISOString(),
-        mileage_km: vehicle.mileage + readingNumber * 5,
-        energy_type: vehicle.energyType,
-        energy_level_pct: Math.max(
-            10,
-            vehicle.energyLevel - readingNumber
-        ),
-        warning_code: null,
-        severity: "none"
-    };
+// Only select connected vehicles
+const connectedVehicles = vehicles.filter(
+  vehicle => vehicle.connected_car.toUpperCase() === "Y"
+);
 
-    events.push(event);
+if (connectedVehicles.length === 0) {
+  throw new Error("No connected vehicles found.");
 }
 
-// Write the generated events to a JSON file
-const outputPath = path.resolve(
-    __dirname,
-    "../../generated-data/connected-cars/sample-telematics-events.json"
-);
+// Generate 4 events per connected vehicle
+const events = [];
+const startTime = Date.now() - 60 * 60 * 1000;
 
-// Ensure the output directory exists
-fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+connectedVehicles.forEach((vehicle, vehicleIndex) => {
+  const baseOdometer = 25000 + vehicleIndex * 12000;
 
-// Write the events to the output file
+  for (let i = 0; i < 4; i++) {
+    const eventTime = new Date(
+      startTime + (vehicleIndex * 4 + i) * 60 * 1000
+    );
+
+    // Two repeated high-warning events for testing
+    const warningCode =
+      vehicleIndex === 0 && (i === 2 || i === 3)
+        ? "OIL-PRESS"
+        : null;
+
+    const isWarning = warningCode !== null;
+
+    const fuelOrCharge = vehicle.fuel_type === "Electric"
+      ? 70 - (i * 3)
+      : 85 - (i * 2);
+
+    events.push({
+      event_id: `TM-${vehicle.vin}-${i + 1}`,
+      event_timestamp: eventTime.toISOString(),
+      vin: vehicle.vin,
+      odometer_km: baseOdometer + (i * 25),
+      fuel_or_charge_percent: fuelOrCharge,
+      warning_code: warningCode,
+      latitude: isWarning ? -25.7479 : null,
+      longitude: isWarning ? 28.2293 : null
+    });
+  }
+});
+
+// Shuffle arrival order to test out-of-order event handling
+for (let i = events.length - 1; i > 0; i--) {
+  const j = Math.floor(Math.random() * (i + 1));
+  [events[i], events[j]] = [events[j], events[i]];
+}
+
+// Save the required Data 360 feed envelope
+const output = { data: events };
+
 fs.writeFileSync(
-    outputPath,
-    JSON.stringify(events, null, 2),
-    "utf8"
+  outputPath,
+  JSON.stringify(output, null, 2)
 );
 
-// Log the generation summary
-console.log("================================");
+// Log summary of the generation process
 console.log("METRO MOTORS TELEMATICS GENERATOR");
-console.log("================================");
+console.log("--------------------------------");
+console.log(`Connected vehicles: ${connectedVehicles.length}`);
 console.log(`Events generated: ${events.length}`);
-console.log(`Vehicles simulated: ${vehicles.length}`);
+console.log(`Warning events: ${events.filter(e => e.warning_code).length}`);
 console.log(`Output: ${outputPath}`);
-console.log("Generation completed successfully!");
+console.log("Generation completed successfully.");

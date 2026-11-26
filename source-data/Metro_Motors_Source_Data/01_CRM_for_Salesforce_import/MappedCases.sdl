@@ -1,0 +1,13 @@
+#Mapping values
+#Wed Nov 25 11:51:25 SAST 2026
+Contact_External_Id__c=Contact\:Contact-External_ID__c
+Dealership__c=Dealership__c
+Description=Description
+External_Id__c=External_ID__c
+Origin=Origin
+Original_Created_Date__c=Original_Created_Date__c
+Priority=Priority
+Status=Status
+Subject=Subject
+Type=Type
+VIN__c=VIN__c
