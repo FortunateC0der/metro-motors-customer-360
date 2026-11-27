@@ -1,0 +1,224 @@
+{
+  "data": [
+    {
+      "event_id": "WEB-C360-0004",
+      "event_timestamp": "2026-11-27T13:13:00.148Z",
+      "device_id": "DEVICE-C360-001",
+      "session_id": "SESSION-C360-001",
+      "event_type": "service_booked",
+      "email": "tshepo.govender@outlook.com",
+      "model": null,
+      "vin": "RBKYFDEKFL0264416",
+      "dealership_code": "D10"
+    },
+    {
+      "event_id": "WEB-C360-0011",
+      "event_timestamp": "2026-11-27T13:20:00.148Z",
+      "device_id": "DEVICE-C360-003",
+      "session_id": "SESSION-C360-003",
+      "event_type": "test_drive_booked",
+      "email": "sibusiso.vandermerwe@mweb.co.za",
+      "model": "Ridgeback Double Cab",
+      "vin": null,
+      "dealership_code": "D03"
+    },
+    {
+      "event_id": "WEB-C360-0010",
+      "event_timestamp": "2026-11-27T13:19:00.148Z",
+      "device_id": "DEVICE-C360-003",
+      "session_id": "SESSION-C360-003",
+      "event_type": "finance_calculator_used",
+      "email": null,
+      "model": "Ridgeback Double Cab",
+      "vin": null,
+      "dealership_code": null
+    },
+    {
+      "event_id": "WEB-C360-0001",
+      "event_timestamp": "2026-11-27T13:10:00.148Z",
+      "device_id": "DEVICE-C360-001",
+      "session_id": "SESSION-C360-001",
+      "event_type": "model_viewed",
+      "email": null,
+      "model": "Ridgeback Double Cab",
+      "vin": null,
+      "dealership_code": null
+    },
+    {
+      "event_id": "WEB-C360-0012",
+      "event_timestamp": "2026-11-27T13:21:00.148Z",
+      "device_id": "DEVICE-C360-003",
+      "session_id": "SESSION-C360-003",
+      "event_type": "service_booked",
+      "email": "sibusiso.vandermerwe@mweb.co.za",
+      "model": null,
+      "vin": "RBK486MNVK2817934",
+      "dealership_code": "D03"
+    },
+    {
+      "event_id": "WEB-C360-0016",
+      "event_timestamp": "2026-11-27T13:25:00.148Z",
+      "device_id": "DEVICE-C360-004",
+      "session_id": "SESSION-C360-004",
+      "event_type": "service_booked",
+      "email": "elize.patel@yahoo.com",
+      "model": null,
+      "vin": "RBKW62PAJK7624469",
+      "dealership_code": "D11"
+    },
+    {
+      "event_id": "WEB-C360-0013",
+      "event_timestamp": "2026-11-27T13:22:00.148Z",
+      "device_id": "DEVICE-C360-004",
+      "session_id": "SESSION-C360-004",
+      "event_type": "model_viewed",
+      "email": null,
+      "model": "Ridgeback Double Cab",
+      "vin": null,
+      "dealership_code": null
+    },
+    {
+      "event_id": "WEB-C360-0020",
+      "event_timestamp": "2026-11-27T13:29:00.148Z",
+      "device_id": "DEVICE-C360-005",
+      "session_id": "SESSION-C360-005",
+      "event_type": "service_booked",
+      "email": "thabo.khumalo@mweb.co.za",
+      "model": null,
+      "vin": "RBK43DGR1L0566881",
+      "dealership_code": "D15"
+    },
+    {
+      "event_id": "WEB-C360-0009",
+      "event_timestamp": "2026-11-27T13:18:00.148Z",
+      "device_id": "DEVICE-C360-003",
+      "session_id": "SESSION-C360-003",
+      "event_type": "model_viewed",
+      "email": null,
+      "model": "Ridgeback Double Cab",
+      "vin": null,
+      "dealership_code": null
+    },
+    {
+      "event_id": "WEB-C360-0014",
+      "event_timestamp": "2026-11-27T13:23:00.148Z",
+      "device_id": "DEVICE-C360-004",
+      "session_id": "SESSION-C360-004",
+      "event_type": "finance_calculator_used",
+      "email": null,
+      "model": "Ridgeback Double Cab",
+      "vin": null,
+      "dealership_code": null
+    },
+    {
+      "event_id": "WEB-C360-0003",
+      "event_timestamp": "2026-11-27T13:12:00.148Z",
+      "device_id": "DEVICE-C360-001",
+      "session_id": "SESSION-C360-001",
+      "event_type": "test_drive_booked",
+      "email": "tshepo.govender@outlook.com",
+      "model": "Ridgeback Double Cab",
+      "vin": null,
+      "dealership_code": "D10"
+    },
+    {
+      "event_id": "WEB-C360-0015",
+      "event_timestamp": "2026-11-27T13:24:00.148Z",
+      "device_id": "DEVICE-C360-004",
+      "session_id": "SESSION-C360-004",
+      "event_type": "test_drive_booked",
+      "email": "elize.patel@yahoo.com",
+      "model": "Ridgeback Double Cab",
+      "vin": null,
+      "dealership_code": "D11"
+    },
+    {
+      "event_id": "WEB-C360-0018",
+      "event_timestamp": "2026-11-27T13:27:00.148Z",
+      "device_id": "DEVICE-C360-005",
+      "session_id": "SESSION-C360-005",
+      "event_type": "finance_calculator_used",
+      "email": null,
+      "model": "Ridgeback Single Cab",
+      "vin": null,
+      "dealership_code": null
+    },
+    {
+      "event_id": "WEB-C360-0007",
+      "event_timestamp": "2026-11-27T13:16:00.148Z",
+      "device_id": "DEVICE-C360-002",
+      "session_id": "SESSION-C360-002",
+      "event_type": "test_drive_booked",
+      "email": "lwazi.nkosi@icloud.com",
+      "model": "Ridgeback Double Cab",
+      "vin": null,
+      "dealership_code": "D06"
+    },
+    {
+      "event_id": "WEB-C360-0002",
+      "event_timestamp": "2026-11-27T13:11:00.148Z",
+      "device_id": "DEVICE-C360-001",
+      "session_id": "SESSION-C360-001",
+      "event_type": "finance_calculator_used",
+      "email": null,
+      "model": "Ridgeback Double Cab",
+      "vin": null,
+      "dealership_code": null
+    },
+    {
+      "event_id": "WEB-C360-0008",
+      "event_timestamp": "2026-11-27T13:17:00.148Z",
+      "device_id": "DEVICE-C360-002",
+      "session_id": "SESSION-C360-002",
+      "event_type": "service_booked",
+      "email": "lwazi.nkosi@icloud.com",
+      "model": null,
+      "vin": "RBKP3VHV1M5799969",
+      "dealership_code": "D06"
+    },
+    {
+      "event_id": "WEB-C360-0019",
+      "event_timestamp": "2026-11-27T13:28:00.148Z",
+      "device_id": "DEVICE-C360-005",
+      "session_id": "SESSION-C360-005",
+      "event_type": "test_drive_booked",
+      "email": "thabo.khumalo@mweb.co.za",
+      "model": "Ridgeback Single Cab",
+      "vin": null,
+      "dealership_code": "D15"
+    },
+    {
+      "event_id": "WEB-C360-0005",
+      "event_timestamp": "2026-11-27T13:14:00.148Z",
+      "device_id": "DEVICE-C360-002",
+      "session_id": "SESSION-C360-002",
+      "event_type": "model_viewed",
+      "email": null,
+      "model": "Ridgeback Double Cab",
+      "vin": null,
+      "dealership_code": null
+    },
+    {
+      "event_id": "WEB-C360-0017",
+      "event_timestamp": "2026-11-27T13:26:00.148Z",
+      "device_id": "DEVICE-C360-005",
+      "session_id": "SESSION-C360-005",
+      "event_type": "model_viewed",
+      "email": null,
+      "model": "Ridgeback Single Cab",
+      "vin": null,
+      "dealership_code": null
+    },
+    {
+      "event_id": "WEB-C360-0006",
+      "event_timestamp": "2026-11-27T13:15:00.148Z",
+      "device_id": "DEVICE-C360-002",
+      "session_id": "SESSION-C360-002",
+      "event_type": "finance_calculator_used",
+      "email": null,
+      "model": "Ridgeback Double Cab",
+      "vin": null,
+      "dealership_code": null
+    }
+  ]
+}

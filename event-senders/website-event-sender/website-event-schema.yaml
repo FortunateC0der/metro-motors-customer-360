@@ -1,0 +1,44 @@
+
+openapi: 3.0.3
+info:
+  title: Metro Motors Website Events
+  version: 1.0.0
+  description: Website interaction events for Metro Motors.
+
+components:
+  schemas:
+    WebsiteEvent:
+      type: object
+      properties:
+        event_id:
+          type: string
+          description: Unique website event identifier
+        event_timestamp:
+          type: string
+          format: date-time
+          description: UTC timestamp when the event occurred
+        device_id:
+          type: string
+          description: Anonymous browser or device identifier
+        session_id:
+          type: string
+          description: Website browsing session identifier
+        email:
+          type: string
+          nullable: true
+          description: Visitor email when voluntarily provided
+        event_type:
+          type: string
+          description: model_viewed, test_drive_booked, service_booked or finance_calculator_used
+        model:
+          type: string
+          nullable: true
+          description: Vehicle model viewed or selected
+        vin:
+          type: string
+          nullable: true
+          description: Vehicle VIN for service bookings
+        dealership_code:
+          type: string
+          nullable: true
+          description: Dealership identifier for bookings
